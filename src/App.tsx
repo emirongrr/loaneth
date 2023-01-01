@@ -1,10 +1,11 @@
 import React from 'react';
-import Newyear from './components/newyear';
+import { Header } from './components/Header';
+
 
 function App() {
   return (
     <div className="App">
-      <Newyear message='happy new year commit' />
+      <Header />
     </div>
   );
 }
