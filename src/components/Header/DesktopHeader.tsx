@@ -14,19 +14,19 @@ function DesktopHeaderBase({ className, color }: DesktopHeaderProps) {
 
       <nav>
         <a>
-          W
+          what we build
         </a>
         <a>
-          DEVS
+          dashboard
         </a>
         <a>
-          DEVS
+          take loan
         </a>
         <a>
-          DEVS
+          pay the loan
         </a>
         <a>
-          DEVS
+          devs
         </a>
       </nav>
 
