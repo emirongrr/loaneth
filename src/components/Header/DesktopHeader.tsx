@@ -7,18 +7,27 @@ export interface DesktopHeaderProps {
 
 function DesktopHeaderBase({ className, color }: DesktopHeaderProps) {
   return (
-    <header className={className} data-dark={color === 'dark'}>
+    <header className={className} data-dark={color === 'light'}>
       <section>
         <span>loaneth</span>
       </section>
+
       <nav>
         <a>
-          DASHBOARD
+          W
         </a>
         <a>
           DEVS
         </a>
-
+        <a>
+          DEVS
+        </a>
+        <a>
+          DEVS
+        </a>
+        <a>
+          DEVS
+        </a>
       </nav>
 
     </header>
@@ -29,8 +38,17 @@ export const DesktopHeader = styled(DesktopHeaderBase)`
   // ---------------------------------------------
   // style
   // ---------------------------------------------
-  background-color: #ffffff;
-
+  background: inherit;
+  border-radius:10px;
+  margin: 10px;
+  padding: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3), 
+  0 6px 20px rgba(0, 0, 0, 0.15);
+  .after  { 
+    z-index: -1;
+    filter: blur(10px);
+  }
   a {
     text-decoration: none;
   }
@@ -39,18 +57,17 @@ export const DesktopHeader = styled(DesktopHeaderBase)`
   > :first-child {
     font-size: 16px;
     font-weight: 900;
-
-    color: #333333;
+    color: white;
   }
 
   nav {
     a {
       font-size: 13px;
       font-weight: 500;
-      color: #696969;
+      color: white;
 
       &:hover {
-        color: #515151;
+        opacity: 0.7;
       }
 
       &.active {
@@ -58,20 +75,9 @@ export const DesktopHeader = styled(DesktopHeaderBase)`
         color: #333333;
       }
     }
+    backdrop-filter: blur(10px);
   }
 
-  // webapp
-  > :last-child {
-    .webapp {
-      color: #999999;
-      background-color: #f6f6f6;
-
-      &:hover {
-        color: #7e7e7e;
-        background-color: #e9e9e9;
-      }
-    }
-  }
 
   &[data-dark='true'] {
     background-color: #000000;
@@ -96,17 +102,6 @@ export const DesktopHeader = styled(DesktopHeaderBase)`
       }
     }
 
-    > :last-child {
-      .webapp {
-        color: rgba(255, 255, 255, 0.54);
-        background-color: #161616;
-
-        &:hover {
-          color: rgba(255, 255, 255, 0.65);
-          background-color: #242424;
-        }
-      }
-    }
   }
 
   // ---------------------------------------------
@@ -117,16 +112,19 @@ export const DesktopHeader = styled(DesktopHeaderBase)`
 
   display: flex;
   align-items: center;
-
-  > :first-child {
-    flex: 1;
-  }
+  backdrop-filter: blur(10px);
 
   nav {
     a:not(:last-child) {
       margin-right: 28px;
     }
-
+    display:flex;
     margin-right: 34px;
+    backdrop-filter: blur(10px);
   }
+
+  section {
+    flex:1;
+  }
+
 `; 
